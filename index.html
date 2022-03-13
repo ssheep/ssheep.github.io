@@ -3,49 +3,32 @@
 <html lang="en">
 
 <head>
+
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-  <link href="https://ssheep.org" rel="canonical" />
-
-  <!-- title -->
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
 
   <title>ssheep</title>
   <meta content="ssheep" name="author" />
-
-  <!-- description -->
-
-  <meta content="Aqui estamos nós, turistas de guerra, bizarros casais, restos mortais do Ibirapuera" name="description">
-
-  <!-- tags -->
-
+  <meta content="I say someone in another time will remember us." name="description">
   <meta content="ssheep, design" name="keywords" />
+  <meta content="#0a0b0c" name="theme-color" />
 
-  <!-- icon -->
+  <link href="https://ssheep.org" rel="canonical" />
 
-  <link href="ssheep.png" rel="icon" type="image/x-icon" />
-  <link href="ssheep.png" rel="shortcut icon" />
-  <link href="ssheep.png" rel="apple-touch-icon" />
-  <link href="ssheep.png" rel="icon" sizes="192x192" />
-
-  <!-- pinterest -->
-
-  <meta content="nopin" description="" name="pinterest" />
-
-  <!-- og -->
+  <link href="ssheep.jpg" rel="icon" type="image/x-icon" />
+  <link href="ssheep.jpg" rel="shortcut icon" />
+  <link href="ssheep.jpg" rel="apple-touch-icon" />
+  <link href="ssheep.jpg" rel="icon" sizes="192x192" />
 
   <meta property="og:title" content="ssheep" />
-  <meta property="og:description" content="Aqui estamos nós, turistas de guerra, bizarros casais, restos mortais do Ibirapuera" />
+  <meta property="og:description" content="I say someone in another time will remember us." />
   <meta property="og:site_name" content="ssheep" />
-  <meta property="og:locale" content="en_GB" />
+  <meta property="og:locale" content="en" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ssheep.org" />
   <meta property="og:image" content="https://ssheep.org/640x320.jpg" />
-
-  <!-- twitter -->
 
   <meta name="twitter:site" content="ssheep" />
   <meta name="twitter:creator" content="ssheep" />
@@ -56,10 +39,10 @@
   <meta name="twitter:image" content="https://ssheep.org/640x320.jpg" />
   <meta name="twitter:image:alt" content="The last man on Earth" />
 
-  <!-- font -->
+  <meta content="nopin" description="" name="pinterest" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:wght@700&family=Work+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 
   <style>
     html {
@@ -74,13 +57,15 @@
       min-height: 100vh;
       box-sizing: border-box;
 
-      font-family: 'Work Sans', sans-serif;
+      font-family: sans-serif;
       font-size: 12pt;
       font-weight: normal;
-      line-height: 100%;
+      line-height: 160%;
 
-      color: #1d1b1f;
-      background-color: #e8e9ea;
+      /* color: #1d1b1f;
+      background-color: #e8e9ea; */
+      color: #fbf7f5;
+      background-color: #0a0b0c;
 
       display: flex;
       flex-direction: column;
@@ -89,12 +74,12 @@
       align-items: center;
       align-content: center;
 
-      -webkit-tap-highlight-color: transparent;
+      -webkit-tap-highlight-color: #ffc800;
     }
 
     ::selection {
-      color: #e8e9ea;
-      background-color: #1d1b1f;
+      color: #0a0b0c;
+      background-color: #ffc800;
     }
 
     div,
@@ -122,32 +107,50 @@
       max-width: 100%;
     }
 
-    p {
+    p,
+    h1,
+    h2,
+    h3,
+    h4 {
       margin: 0;
-      padding: 0 0 8px 0;
+      padding: 8px 24px;
       box-sizing: border-box;
+      text-align: left;
+    }
+
+    p {
+      max-width: 600px;
       width: 100%;
-      line-height: 144%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      width: 640px;
+      line-height: 96%;
+      font-weight: normal;
+      font-family: serif;
+      opacity: 0.9;
     }
 
     h1 {
-      margin: 0;
-      padding: 0 0 12px 0;
-      box-sizing: border-box;
-      width: 100%;
-      line-height: 96%;
-      font-weight: 700;
-      font-size: 24pt;
+      font-size: 14pt;
+    }
 
-      font-family: 'Averia Libre', cursive;
+    h2 {
+      font-size: 24pt;
+    }
+
+    h3 {
+      font-size: 16pt;
+      margin-top: 8px;
     }
 
     a {
       text-decoration: none;
       font-weight: 700;
       color: #1d1b1f;
-
-      font-family: 'Averia Libre', cursive;
     }
 
     #avatar {
@@ -155,20 +158,16 @@
       background-position: center center;
       background-size: 100% auto;
       background-color: #1d1b1f;
-      background-image: url('ssheep.png');
-      width: 128px;
-      height: 128px;
+      background-image: url('ssheep.jpg');
+      width: 112px;
+      height: 112px;
       border-radius: 50%;
       margin: 0 16px;
-    }
-
-    #bio {
-      margin: 0;
-      width: 360px;
+      cursor: default;
     }
 
     main {
-      min-width: 480px;
+      min-width: 240px;
       max-width: 800px;
       height: auto;
       margin-bottom: 36px;
@@ -177,12 +176,20 @@
     article {
       margin: 0 0 16px 0;
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
     }
 
     article img {
       width: 100%;
       height: auto;
       border-radius: 2px;
+      margin: 16px 0;
+      padding: 0;
     }
   </style>
 
@@ -192,14 +199,19 @@
 
   <header>
 
-    <div id="avatar"></div>
+    <a href="#" id="avatar">
+    </a>
 
   </header>
 
   <main>
 
     <article>
-      <img src="p/derinkuyu.jpg">
+
+      <p>
+        …everything was just like jazz
+      </p>
+
     </article>
 
   </main>
